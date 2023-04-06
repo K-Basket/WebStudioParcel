@@ -1,0 +1,36 @@
+.services {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+  padding-top: 0;
+}
+
+.services__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.services__item {
+  flex-basis: calc((100% - 60px) / 3);
+}
+
+.services__box {
+  position: relative;
+  display: inline-block;
+}
+
+.title-services {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  padding-top: 27px;
+  padding-bottom: 27px;
+  width: 100%;
+
+  text-align: center;
+
+  color: var(--colorLight);
+  background-color: rgba(47, 48, 58, 0.8);
+}

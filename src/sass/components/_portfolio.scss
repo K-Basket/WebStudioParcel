@@ -1,0 +1,161 @@
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  // justify-content: center;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
+}
+
+.filter__item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  @media screen and (max-width: 767px) {
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.filter__button {
+  padding: 8px 22px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--colorTextSecond);
+  background-color: var(--colorBgTerty);
+  border: none;
+  border-radius: 4px;
+
+  transition: color $transition, background-color $transition,
+    box-shadow $transition;
+
+  &:hover,
+  :focus {
+    color: var(--colorLight);
+    background-color: var(--colorAccent);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.activities {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-right: calc(-1 * $marginItem);
+    margin-bottom: calc(-1 * $marginItem);
+  }
+}
+
+.activities__item {
+  margin-bottom: $marginItem;
+
+  @media screen and (min-width: 768px) {
+    margin-right: $marginItem;
+    flex-basis: calc((100%) / 2 - $marginItem);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100%) / 3 - $marginItem);
+  }
+}
+
+.activities__link {
+  //для достижения одинаковой ширины карточки по вертикали
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  color: var(--colorTextSecond);
+
+  transition: box-shadow $transition;
+
+  &:hover,
+  :focus {
+    /* тень работает только на блочных элементах
+  поэтому добавлен display block */
+    display: block;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.activities__overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.activities__text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+  padding: 0px 24px;
+
+  font-size: 18px;
+  line-height: 1.5555;
+  letter-spacing: 0.03em;
+
+  color: var(--colorLight);
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform $transition;
+}
+
+.activities__link {
+  &:hover .activities__text-overlay,
+  &:focus .activities__text-overlay {
+    transform: translate(0);
+  }
+}
+
+.activities__description {
+  //для достижения одинаковой ширины карточки по вертикали
+  flex-grow: 1;
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top-width: 0;
+}
+
+.activities__title {
+  margin-bottom: 4px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  text-align: left;
+
+  color: var(--colorTextSecond);
+}
+
+.activities__text {
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
+
+  color: var(--colorTextMain);
+}

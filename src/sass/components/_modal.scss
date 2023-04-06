@@ -1,0 +1,47 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  transition: opacity $transition;
+
+  // модальное окно On/Off
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  &.is-hidden .modal {
+    /* анимация open/close модального окна (scale) */
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  max-width: 450px;
+  width: calc(100% - 30px);
+  // min-height: 609px;
+
+  @media screen and (min-width: 1200px) {
+    min-width: 528px;
+    min-height: 581px;
+  }
+
+  background-color: var(--colorLight);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  /* анимация open/close модального окна (scale) */
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform $transition;
+}

@@ -1,0 +1,48 @@
+.customers__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.customers__item {
+  flex-basis: calc((100% - 30px) / 2);
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 150px) / 6);
+  }
+
+  background-color: var(--colorLight);
+}
+
+.customers__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 16px 0px;
+
+  color: var(--colorIconPrimy);
+  fill: var(--colorIconPrimy);
+
+  @include bordered(none);
+
+  transition: color $transition, fill $transition;
+
+  &:hover,
+  &:focus {
+    color: var(--colorAccent);
+    fill: var(--colorAccent);
+  }
+}
+
+.customers__icon {
+  width: 41px;
+  height: 46.7px;
+  fill: currentColor;
+
+  transition: fill $transition;
+}

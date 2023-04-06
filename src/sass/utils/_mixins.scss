@@ -1,0 +1,12 @@
+// отключил в hero
+@mixin gradientBgImage($gradtDirectn, $colorFrom, $colorTo, $linkImg) {
+  background-image: linear-gradient(to $gradtDirectn, $colorFrom, $colorTo),
+    $linkImg;
+}
+
+@mixin bordered($color) {
+  border-width: 1px;
+  border-style: solid;
+  border-color: $color;
+  border-radius: 4px;
+}

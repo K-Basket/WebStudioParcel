@@ -1,0 +1,18 @@
+:root {
+  --colorTextMain: #757575;
+  --colorTextSecond: #212121;
+  --colorAccent: #2196f3;
+  --colorAccentSecond: #188ce8;
+  --colorLight: #ffffff;
+  --colorDark: #000000;
+  --colorIconPrimy: #afb1b8;
+  --colorBgPrimy: #2f303a;
+  --colorBgSecond: #f5f5f5;
+  --colorBgTerty: #f5f4fa;
+}
+
+$transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+$marginItem: 30px;
+$phone: 480;
+$tablet: 768;
+$laptop: 1170;

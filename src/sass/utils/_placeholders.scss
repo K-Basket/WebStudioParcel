@@ -1,0 +1,48 @@
+%visuallyHidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+%fontPropertiesHeader {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+%fontPropertiesFooter {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7142;
+  letter-spacing: 0.03em;
+}
+
+%titlesFooter {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1, 1429;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--colorLight);
+}
+
+%buttonProperties {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--colorLight);
+  background-color: var(--colorAccent);
+  border: none;
+  border-radius: 4px;
+}
