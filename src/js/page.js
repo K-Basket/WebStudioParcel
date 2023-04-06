@@ -1,1 +1,1 @@
-console.log('Hi, this is test');
+// console.log('Hi, this is test');
